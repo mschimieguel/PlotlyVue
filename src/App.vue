@@ -29,7 +29,7 @@
       <v-toolbar-title>Application</v-toolbar-title>
     </v-app-bar>
 
-    <v-main>
+    <v-main id="Back">
       <!--  -->
       <router-view></router-view>
     </v-main>
@@ -41,15 +41,19 @@ export default {
   data: () => ({
     drawer: null,
     items: [
-      { title: "Barchart", icon: "mdi-view-dashboard", to: "/BarChart" },
+      { title: "Piechart", icon: "mdi-view-dashboard", to: "/PieChart" },
       { title: "BoxPlot", icon: "mdi-image", to: "/BoxPlot" },
       { title: "BubbleChart", icon: "mdi-help-box", to: "/BubbleChart" },
-      {
-        title: "ContinuousErrorBar",
-        icon: "mdi-help-box",
-        to: "/ContinuousErrorBar",
-      },
+      { title: "ContinuousErrorBar",icon: "mdi-help-box",to: "/ContinuousErrorBar"},
+      { title: "Barchart", icon: "mdi-view-dashboard", to: "/BarChart" },
+      
     ],
   }),
 };
 </script>
+<style>
+  #Back {
+    /*background-color: black;*/
+  }
+
+</style>

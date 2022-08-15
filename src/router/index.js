@@ -3,6 +3,7 @@ import VueRouter from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 
 
+import PieChart from '../views/Plotly/PieChart.vue'
 import BarChart from '../views/Plotly/BarChart.vue'
 import BoxPlot from '../views/Plotly/BoxPlot.vue'
 import BubbleChart from '../views/Plotly/BubbleChart.vue'
@@ -24,10 +25,12 @@ const routes = [
     // which is lazy-loaded when the route is visited.
     component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
   },
-  {path: '/BarChart',component:BarChart },
+  {path: '/pieChart',component:PieChart },
   {path: '/BoxPlot',component:BoxPlot },
   {path: '/BubbleChart',component:BubbleChart },
   {path: '/ContinuousErrorBar',component:ContinuousErrorBar },
+  {path: '/BarChart',component:BarChart },
+
 ]
 
 const router = new VueRouter({
